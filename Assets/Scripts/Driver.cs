@@ -5,8 +5,8 @@ using UnityEngine;
 public class Driver : MonoBehaviour
 {
     // Start is called before the first frame update
-    const float MovePerSeconds = 20f;
-    float turnRad = Mathf.PI / 2;
+    const float MovePerSeconds = 6f;
+    const float TurnSpeed = 1.5f;
     Rigidbody2D rigidSpaceShip;
     void Start()
     {
@@ -19,15 +19,12 @@ public class Driver : MonoBehaviour
         float direction = Input.GetAxis("Turn");
         if (direction != 0)
         {
-            turnRad += -direction * 0.02f;
-            transform.Rotate(0, 0, -direction * 1.15f);
+            transform.Rotate(0, 0, -direction * TurnSpeed);
         }
 
-        if (Input.GetAxis("DriveShip") != 0)
+        if (Input.GetAxis("DriveShip") > 0)
         {
-            Vector2 vector = new Vector2(Mathf.Cos(turnRad), Mathf.Sin(turnRad*1));//jo;j;;
-            vector *= MovePerSeconds;
-            rigidSpaceShip.AddForce(vector, ForceMode2D.Force);
+            rigidSpaceShip.AddForce(transform.up * MovePerSeconds, ForceMode2D.Force);
         }
     }
 }

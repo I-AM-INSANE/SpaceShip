@@ -10,10 +10,11 @@ GameObject:
   m_Component:
   - component: {fileID: 9051608870572144540}
   - component: {fileID: 8627086598243124544}
-  - component: {fileID: 3010576812551635112}
   - component: {fileID: -5472064565673960839}
   - component: {fileID: 3868489548292111918}
-  - component: {fileID: -9168145061401544189}
+  - component: {fileID: -5505746678171075621}
+  - component: {fileID: -2915203836193672385}
+  - component: {fileID: -9030293568107518404}
   m_Layer: 0
   m_Name: prefabSpaceShip
   m_TagString: Untagged
@@ -85,18 +86,6 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!114 &3010576812551635112
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2911010062812922552}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d6ec7358b90116540b92e0f307bd6f5d, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!50 &-5472064565673960839
 Rigidbody2D:
   serializedVersion: 4
@@ -110,8 +99,8 @@ Rigidbody2D:
   m_UseFullKinematicContacts: 0
   m_UseAutoMass: 0
   m_Mass: 1
-  m_LinearDrag: 6
-  m_AngularDrag: 0.05
+  m_LinearDrag: 1
+  m_AngularDrag: 1
   m_GravityScale: 1
   m_Material: {fileID: 0}
   m_Interpolate: 0
@@ -144,7 +133,19 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 1.28, y: 1.28}
   m_EdgeRadius: 0
---- !u!114 &-9168145061401544189
+--- !u!114 &-5505746678171075621
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2911010062812922552}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d6ec7358b90116540b92e0f307bd6f5d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &-2915203836193672385
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -154,5 +155,17 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 0a0933764d369a748b1bcc57f443fba1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &-9030293568107518404
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2911010062812922552}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c9e026a20a276e740a04ee035cde4a9b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
