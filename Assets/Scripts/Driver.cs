@@ -5,7 +5,7 @@ using UnityEngine;
 public class Driver : MonoBehaviour
 {
     // Start is called before the first frame update
-    const float MovePerSeconds = 6f;
+    const float MovePerSecond = 6f;
     const float TurnSpeed = 1.5f;
     Rigidbody2D rigidSpaceShip;
     void Start()
@@ -24,7 +24,7 @@ public class Driver : MonoBehaviour
 
         if (Input.GetAxis("DriveShip") > 0)
         {
-            rigidSpaceShip.AddForce(transform.up * MovePerSeconds, ForceMode2D.Force);
+            rigidSpaceShip.AddForce(transform.up * MovePerSecond, ForceMode2D.Force);
         }
     }
 }
