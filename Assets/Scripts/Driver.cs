@@ -8,6 +8,7 @@ public class Driver : MonoBehaviour
     const float MovePerSecond = 6f;
     const float TurnSpeed = 1.5f;
     Rigidbody2D rigidSpaceShip;
+    public Animator animator;
     void Start()
     {
         rigidSpaceShip = gameObject.GetComponent<Rigidbody2D>();
@@ -25,6 +26,9 @@ public class Driver : MonoBehaviour
         if (Input.GetAxis("DriveShip") > 0)
         {
             rigidSpaceShip.AddForce(transform.up * MovePerSecond, ForceMode2D.Force);
+            animator.SetFloat("Speed", 1);
         }
+        else
+            animator.SetFloat("Speed", 0);
     }
 }
