@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: -2073850743689600576}
   - component: {fileID: 7055947509738772330}
   - component: {fileID: -7149236481439536985}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: prefabAsteroid
   m_TagString: Asteroid
   m_Icon: {fileID: 0}
@@ -110,6 +110,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a4838e065057037479bdecc98b164286, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  prefabAsteroidMini: {fileID: 8279436998764179971, guid: 6f4fc6eba495d724d83a2838f194602d,
+    type: 3}
 --- !u!50 &7055947509738772330
 Rigidbody2D:
   serializedVersion: 4
