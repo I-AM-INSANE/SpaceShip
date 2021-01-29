@@ -11,6 +11,7 @@ public class SpaceShip : MonoBehaviour
 
     Bullet bullet;
     Vector3 bulletSpawnLocation;
+    Vector2 recoil;
     Timer timer;
     bool shotCheck = false;
 
@@ -31,11 +32,13 @@ public class SpaceShip : MonoBehaviour
         if (Input.GetAxis("Shot") > 0 && timer.Finished && !shotCheck)
         {
             bullet = Instantiate(prefabBullet, bulletSpawnLocation, Quaternion.identity);
+            AudioManager.Play(AudioClipName.Shot);
             bullet.BulletDirection = gameObject.transform.up;
             bullet.BulletRotation = gameObject.transform.rotation;
-            timer.Duration = 0.2f;
+            timer.Duration = 0.3f;
             timer.Run();
             shotCheck = true;
+            gameObject.GetComponent<Rigidbody2D>().AddForce(- gameObject.transform.up / 3, ForceMode2D.Impulse);
         }
         if (Input.GetAxis("Shot") == 0)
             shotCheck = false;

@@ -37,6 +37,7 @@ public class Asteroid : MonoBehaviour
             //collision.gameObject.GetComponent<HUD>().Stop();
             GameObject.FindGameObjectWithTag("HUD").GetComponent<HUD>().Stop();
             Destroy(gameObject);
+            AudioManager.Play(AudioClipName.Explosion);
         }
         Destroy(collision.gameObject);
         Instantiate(prefabAsteroidMini, transform.position, Quaternion.identity);

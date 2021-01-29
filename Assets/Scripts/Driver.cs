@@ -25,6 +25,7 @@ public class Driver : MonoBehaviour
 
         if (Input.GetAxis("DriveShip") > 0)
         {
+            AudioManager.Play(AudioClipName.Drive);
             rigidSpaceShip.AddForce(transform.up * MovePerSecond, ForceMode2D.Force);
             animator.SetFloat("Speed", 1);
         }

@@ -34,6 +34,7 @@ public class AsteroidMini : MonoBehaviour
         if (collision.gameObject.tag == "SpaceShip")
         {
             Destroy(gameObject);
+            AudioManager.Play(AudioClipName.Explosion);
             GameObject.FindGameObjectWithTag("HUD").GetComponent<HUD>().Stop();
         }
     }
